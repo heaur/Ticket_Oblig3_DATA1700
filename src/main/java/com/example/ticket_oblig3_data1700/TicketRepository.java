@@ -35,7 +35,7 @@ public class TicketRepository {
     }
 
     public List<Ticket> getAllTickets(){
-        List<Ticket> getAllTickets = db.query("SELECT * FROM Ticket", new TicketRowmapper());
+        List<Ticket> getAllTickets = db.query("SELECT * FROM Ticket ORDER BY lastName", new TicketRowmapper());
         return getAllTickets;
     }
 
